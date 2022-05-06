@@ -8,20 +8,19 @@ cta.addEventListener("click", (e) => {
   e.preventDefault();
 
   if (!this.email.value || this.email.value == "") {
-    error.classList.add("errorAnim");
+    // error.classList.add("errorAnim");
   } else {
     const fetchData = {
       method: "POST",
       body: JSON.stringify({ email: this.email.value, js: true }),
       headers: { "Content-type": "application/json" },
     };
+    fetch("/subscribe", fetchData).then((res) => {
+      if (res.ok) {
+        //  ...
+      } else {
+        // error.classList.add("errorAnim");
+      }
+    });
   }
-
-  fetch("/subscribe", fetchData).then((res) => {
-    if (res.ok) {
-      //  ...
-    } else {
-      error.classList.add("errorAnim");
-    }
-  });
 });
