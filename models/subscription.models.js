@@ -1,7 +1,7 @@
-import dotenv from "dotenv";
+const dotenv = require("dotenv");
 dotenv.config();
 
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 
 mongoose.createConnection(process.env.mongooseUri, {
   useNewUrlParser: true,
@@ -14,4 +14,4 @@ const schema = new mongoose.Schema({
 
 const Subscription = mongoose.model("Subscription", schema);
 
-export { Subscription };
+module.exports = { Subscription };

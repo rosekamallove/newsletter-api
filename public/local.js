@@ -44,7 +44,7 @@ if (document.getElementById("subscribe-box") !== null) {
           .querySelector("#subscribe-box .error-message")
           .classList.add("active");
 
-        // Show the apropriate response
+        // Show the appropriate response
         if (getResponse.code == "03") {
           localStorage.setItem("#subscribe", input);
         } else {
