@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>News Letter</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="center">
+      <form action="/subscribe" method="POST">
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter Your Email"
+          required
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+        />
+        <input type="submit" value="Notify Me" class="button" id="cta" />
+      </form>
+    </div>
+    <div id="success" class="inner-form">
+      <h2>Confirm Your Email!</h2>
+      <p>The last step is to confirm your email. Give it a couple minutes</p>
+    </div>
+  </body>
+  <script src="./script.js"></script>
+</html>
