@@ -27,10 +27,10 @@ app.post("/subscribe", (req, res) => {
   const mcDataPost = JSON.stringify(mcData);
 
   const options = {
-    url: "",
+    url: `https://us8.api.mailchimp.com/3.0/list/${process.env.MINCHIMP_UNIQUE_LIST_ID}`,
     method: "POST",
     headers: {
-      Authorization: "auth...",
+      Authorization: process.env.MINCHIMP_API_KEY,
     },
     body: mcDataPost,
   };
